@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background-color: #416662;
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+nav .logo h1 {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #ffffff 0%, #84bd91 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 95%;
+  font-weight: 500;
+  
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  transition: 0.8s;
+  background-color: #243b39;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+  height: 100vh;
+  padding-bottom: 10% 0;
+  background: #385855;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+  position: fixed;
+}
+.active {
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.514) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 95%;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  transition: 0.8s;
+  background-color: #243b39;
+}
+#imagem-perfil img {
+  width: 50px;
+  border-radius: 10px;
+  margin-left: 15px;
+  border: 3px solid white;
+}
+#linha1 {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-bottom: #4a746f solid 2px;
+}
+#linha2 {
+  width: 90%;
+  margin-top: 290%;
+  margin-bottom: 0px;
+  border-bottom: #4a746f solid 2px;
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+.Btn:hover {
+  width: 80px;
+  border-radius: 10px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 40%;
+  transition-duration: .3s;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 5px;
+}
+
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  .Btn{
+    margin-top: 15px;
+  }
+}

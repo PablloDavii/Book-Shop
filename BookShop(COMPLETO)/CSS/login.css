@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  background-color: #364a4b;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#Card-Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#formulario {
+  margin-top: 25%;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-family: 'Teachers', sans-serif;
+}
+#formulario p {
+  margin-top: 5%;
+  color: #354a4a;
+}
+#formulario a {
+  color: #364a4b;
+}
+#conteiner-formulario {
+  height: 50vh;
+  width: 25vw;
+  background-color: #f4d2a5;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: solid 10px #f4d2a5;
+}
+#conteiner-esquerdo {
+  height: 50vh;
+  width: 22vw;
+  background-image: linear-gradient(
+    to right top,
+    #364a4b,
+    #416662,
+    #508376,
+    #66a085,
+    #84bd91
+  );
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: solid 10px #f4d2a5;
+}
+#loginTitulo {
+  font-family: 'Teachers', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #354a4a;
+}
+.input {
+  position: relative;
+}
+.input input {
+  height: 22px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #364a4b;
+  outline: none;
+  width: 80%;
+  font-size: 15px;
+  padding-bottom: 5px;
+  background-color: #f4d2a5;
+  color: #364a4b;
+  font-family: 'Teachers', sans-serif;
+}
+.input input::placeholder {
+  color: #364a4b;
+}
+#botao input {
+  border: none;
+  border: 1px solid #364a4b;
+  outline: none;
+  width: 80%;
+  height: 30px;
+  font-size: 15px;
+  background-color: transparent;
+  color: #364a4b;
+  font-family: 'Teachers', sans-serif;
+  margin-top: 5%;
+  cursor: pointer;
+  transition: 0.8s;
+}
+#botao input:hover {
+  background-color: #354a4a;
+  color: #f4d2a5;
+}
+
+#conteiner-esquerdo p {
+  font-family: 'Teachers', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #354a4a;
+  margin: 15% 15%;
+}
+#conteiner-esquerdo span {
+  color: #f4d2a5;
+}
+@media only screen and (max-width: 576px) {
+  #conteiner-formulario {
+    height: 28vh;
+    border-radius: 0px;
+    width: 70vw;
+    border: solid 10px #f4d2a5;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  #conteiner-esquerdo {
+    height: 23vh;
+    width: 70vw;
+    border-radius: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  #Card-Login {
+    flex-direction: column;
+  }
+  #conteiner-esquerdo p {
+    margin: 13% 10%;
+  }
+  #formulario {
+    margin-top: 10%;
+  }
+  #Card-Login {
+    flex-direction: column;
+  }
+  #loginTitulo {
+    display: none;
+  }
+}
